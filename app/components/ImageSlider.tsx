@@ -8,7 +8,6 @@ const ImageSlider = () => {
     "/assets/slide_door1.avif",
     "/assets/slide_door2.avif",
     "/assets/slide_door3.avif",
-    "/assets/slide_page_door.avif"
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
