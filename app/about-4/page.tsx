@@ -3,7 +3,7 @@ import InfoForm from "../components/InfoForm";
 
 const About4 = () => {
   return (
-    <section className="w-full flex flex-col justify-start items-center gap-10 bg-[#ebf5f0]">
+    <section className="w-full flex flex-col justify-start items-center gap-7 sm:max-2xl:gap-10 bg-[#ebf5f0]">
       <div className="w-full h-[25vh] relative sm:max-2xl:h-[70vh] sm:max-2xl:w-[70%] sm:max-2xl:mx-auto sm:max-2xl:mt-5">
         <Image
           src="/assets/painted_doors.avif"
@@ -16,9 +16,9 @@ const About4 = () => {
         </div>
       </div>
 
-      <div className="px-10 py-5 flex flex-col gap-5 sm:max-2xl:gap-7 sm:max-2xl:w-[70%] sm:max-2xl:mx-auto">
-        <p className="font-bold text-[2rem]">Köksluckor</p>
-        <p className="text-[1.6rem] leading-[3.4rem] text-[#111] sm:max-2xl:text-[1.1rem] sm:max-2xl:leading-[2.4rem]">
+      <div className="px-5 py-5 flex flex-col gap-5 sm:max-2xl:gap-7 sm:max-2xl:w-[70%] sm:max-2xl:mx-auto">
+        <p className="font-bold text-[1.7rem]">Köksluckor</p>
+        <p className="text-[1.35rem] leading-[2.6rem] text-[#111] sm:max-2xl:text-[1.1rem] sm:max-2xl:leading-[2.4rem]">
           Vi sprutmålar dina köksluckor att kännas som nya! Istället för att
           byta ut luckor och stommar, kontakta oss för prisförslag på
           sprutlackering av luckorna. Det innebär en stor besparing på både
@@ -33,16 +33,16 @@ const About4 = () => {
         </p>
       </div>
 
-      <div className="px-10 py-5 flex flex-col gap-1 sm:max-2xl:gap-5 sm:max-2xl:w-[70%] sm:max-2xl:mx-auto">
-        <p className="font-bold text-[2.2rem] sm:max-2xl:text-[1.1rem] sm:max-2xl:leading-[2.4rem]">
+      <div className="px-0 sm:max-2xl:px-5 py-5 flex flex-col gap-1 sm:max-2xl:gap-5 sm:max-2xl:w-[70%] sm:max-2xl:mx-auto">
+        <p className="font-bold text-[1.8rem] sm:max-2xl:text-[1.4rem] sm:max-2xl:leading-[2.4rem]">
           <span>Telefon:</span> <span>072-017 56 20 </span>
         </p>
-        <p className="font-bold text-[2.2rem] sm:max-2xl:text-[1.1rem] sm:max-2xl:leading-[2.4rem]">
+        <p className="font-bold text-[1.8rem] sm:max-2xl:text-[1.4rem] sm:max-2xl:leading-[2.4rem]">
           <span>E-post:</span> <span>info@lackverket.se</span>
         </p>
       </div>
 
-      <div className="px-10 pt-0 pb-10 text-[1.6rem] leading-[3.4rem] text-[#111] sm:max-2xl:gap-5 sm:max-2xl:w-[70%] sm:max-2xl:mx-auto sm:max-2xl:text-[1.1rem] sm:max-2xl:leading-[2.4rem]">
+      <div className="px-5 pt-0 pb-10 text-[1.35rem] leading-[2.6rem] text-[#111] sm:max-2xl:gap-5 sm:max-2xl:w-[70%] sm:max-2xl:mx-auto sm:max-2xl:text-[1.1rem] sm:max-2xl:leading-[2.4rem]">
         Det går även bra att anlita oss att måla resterande kök! Skicka en bild
         för offert! Då gäller <span className="font-bold">ROT-avdraget!</span>
       </div>

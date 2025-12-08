@@ -8,22 +8,13 @@ import { useRef, useState } from "react";
 
 
 export default function Home() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [playDisplay, setPlayDisplay] = useState(true);
-
-  const handlePlay = () => {
-    if (videoRef.current) {
-      videoRef.current.play();
-      setPlayDisplay(false);
-    }
-  };
 
   return (
-    <section className="bg-[#ebf5f0] pt-10 w-full overflow-x-hidden">
+    <section className="bg-[#ebf5f0] pt-10 w-full overflow-x-hidden max-lg:text-center">
       {/* ---------------------------------------------------- */}
       {/* 1️⃣ SMALL → MEDIUM UI (mobile/tablet)                */}
       {/* ---------------------------------------------------- */}
-      <section className="lg:hidden px-5">
+      <section className="lg:hidden sm:max-lg:px-5">
         <p
           className={`${robotoBold.className} text-center font-bold text-[7vw] mb-10`}
         >
@@ -73,12 +64,12 @@ export default function Home() {
                   {block.title}
                 </Link>
               </p>
-              <p className={`${robotoBold.className} text-[1.4rem] leading-9`}>
+              <p className={`${robotoBold.className} text-[1.2rem] sm:max-lg:text-[1.4rem] leading-9`}>
                 {block.text}
               </p>
             </div>
 
-            <div className="w-full h-[55vh] relative overflow-hidden">
+            <div className="w-full h-[20vh] sm:max-lg:h-[55vh] relative overflow-hidden">
               <Image
                 src={block.img}
                 alt={block.title}
@@ -99,19 +90,10 @@ export default function Home() {
         {/* VIDEO */}
         <div className="w-full flex justify-center items-center mt-7 mb-10 relative">
           <video
-            ref={videoRef}
             src="/assets/file.mp4"
             controls
             playsInline
             className="w-full rounded-lg"
-          />
-          <Image
-            onClick={handlePlay}
-            src="/assets/play-circle.svg"
-            alt="Play button"
-            width={50}
-            height={50}
-            className={`${playDisplay ? "inline" : "hidden"} absolute z-10`}
           />
         </div>
       </section>
@@ -213,19 +195,10 @@ export default function Home() {
         {/* VIDEO (desktop) */}
         <div className="w-full flex justify-center items-center mt-10 mb-10 relative">
           <video
-            ref={videoRef}
             src="/assets/file.mp4"
             controls
             playsInline
             className="w-full"
-          />
-          <Image
-            onClick={handlePlay}
-            src="/assets/play-circle.svg"
-            alt="Play button"
-            width={50}
-            height={50}
-            className={`${playDisplay ? "inline" : "hidden"} absolute z-10`}
           />
         </div>
       </section>

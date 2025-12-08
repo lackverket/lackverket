@@ -18,7 +18,7 @@ const Header = () => {
         {!isMenuOpen && (
           <button
             onClick={() => setIsMenuOpen(true)}
-            className="absolute top-10 right-8 z-50 cursor-pointer transition-transform active:scale-90"
+            className="absolute top-10 right-6 z-50 cursor-pointer transition-transform active:scale-90"
           >
             <Image
               src="/assets/menu-bar.svg"
@@ -106,7 +106,8 @@ const Header = () => {
           transition-all duration-300 
           hover:text-[#ddf7ea] 
           hover:scale-105
-          underline underline-offset-8 decoration-2
+          underline underline-offset-8 decoration-2 truncate
+          max-sm:w-[20ch] 
         "
             >
               {item.text}

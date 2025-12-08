@@ -2,7 +2,7 @@ import { inter, robotoBold } from "../layout"
 
 const Prislista = () => {
   return (
-    <section className={`${inter.className} py-10 px-6 text-[1.3rem] text-[#111] font-normal leading-[1.9] flex flex-col justify-center items-center gap-8 lg:w-full lg:text-[0.75rem] lg:py-20`}>
+    <section className={`${inter.className} py-10 px-6 text-[1.2rem] sm:max-lg:text-[1.3rem] text-[#111] font-normal leading-[1.9] flex flex-col justify-center items-center gap-8 lg:w-full lg:text-[0.75rem] lg:py-20`}>
       <div className="flex flex-col gap-1 lg:w-[75%] lg:mx-auto">
         <p>Förutsättningar för att denna prislista skall gälla är att luckorna/ dörrarna är rengjorda innan leverans och beslag avtagna.</p>
         <p>För tvätt av luckor eller avtagande av beslag innan slipning så tillkommer en extra debitering på 850kr per timme.</p>
@@ -13,44 +13,44 @@ const Prislista = () => {
       </div>
 
       <div className="text-[1.5rem] text-[#111] lg:w-[75%] lg:mx-auto lg:text-[0.86rem] lg:text-[#222]">
-        <p className="text-[1.9rem] text-[#398652] mt-10 mb-2 lg:text-[18px] lg:font-medium lg:mt-3">OMLACKERING AV TIDIGARE FABRIKS LACKERADE LUCKOR </p>
-        <div className="flex flex-col gap-1 mb-10">
+        <p className="text-[1.8rem] max-sm:text-[1.5rem] text-[#398652] mt-10 mb-2 lg:text-[18px] lg:font-medium lg:mt-3">OMLACKERING AV TIDIGARE FABRIKS LACKERADE LUCKOR </p>
+        <div className="flex flex-col gap-1 mb-10 text-[1.25rem] sm:max-lg:text-[1.3rem]">
           <p>Släta rätvinklade normalstora luckor och stora lådfronter upp till 90cm: 425kr</p>
           <p>Släta rätvinklade stora luckor över 90cm: 550kr</p>
           <p>Släta rätvinklade lådfronter upp till 20cm: 250kr</p>
           <p>Släta rätvinklade lådfronter över 20cm: 325kr</p>
         </div>
 
-        <div className="flex flex-col gap-1 mb-10">
+        <div className="flex flex-col gap-1 mb-10 text-[1.25rem] sm:max-lg:text-[1.3rem]">
           <p>Profilerade eller övertalade normalstora luckor och stora lådfronter upp till 90cm: 450kr</p>
           <p>Profilerade eller övertalade stora luckor över 90cm: 575kr</p>
           <p>Profilerade eller övertalade lådfronter upp till 20cm: 275kr</p>
           <p>Profilerade eller övertalade lådfronter över 20cm: 395kr</p>
         </div>
 
-        <div className="flex flex-col gap-1 mb-10">
+        <div className="flex flex-col gap-1 mb-10 text-[1.25rem] sm:max-lg:text-[1.3rem]">
           <p>Spegel eller spârfrästa normalstora luckor och stora lådfronter upp till 90cm: 475kr</p>
           <p>Spegel eller spârfrästa stora luckor över 90cm: 600kr</p>
           <p>Spegel eller spârfrästa lådfronter upp till 20cm: 295kr</p>
           <p>Spegel eller spârfrästa lådfronter över 20cm: 410kr</p>
         </div>
 
-        <p className="font-bold text-[1.6rem] lg:text-[0.95rem]">Vi målar även resterande kök hemma hos kund! Tiden debiteras 550kr per timme efter rot avdraget! Skicka bild för uträkning av tidsplan!</p>
+        <p className="font-bold text-[1.35rem] sm:max-lg:text-[1.6rem] max-sm:text-[1.5rem] lg:text-[0.95rem]">Vi målar även resterande kök hemma hos kund! Tiden debiteras 550kr per timme efter rot avdraget! Skicka bild för uträkning av tidsplan!</p>
 
       </div>
 
       
-      <div className="text-[1.5rem] text-[#222] lg:w-[75%] lg:mx-auto lg:text-[0.86rem] lg:text-[#222]">
-        <p className="text-[1.7rem] text-[#398652] mt-3 mb-2 lg:text-[16px] lg:font-medium lg:mt-0">OMLACKERING AV TIDIGARE FABRIKS LACKERADE DÖRRAR </p>
+      <div className="text-[1.3rem] sm:max-lg:text-[1.3rem] text-[#222] lg:w-[75%] lg:mx-auto lg:text-[0.86rem] lg:text-[#222]">
+        <p className="text-[1.7rem] max-sm:text-[1.5rem] text-[#398652] mt-3 mb-2 lg:text-[16px] lg:font-medium lg:mt-0">OMLACKERING AV TIDIGARE FABRIKS LACKERADE DÖRRAR </p>
         <p>Gabondörrar: 1275kr</p>
         <p>Spegeldörrar: 1475kr</p>
         <p>Extra tunga innedörrar, branddörr: 1875kr</p>
-        <p><span>Ytterdörrar: från 1875kr, en sida.</span> <span className="font-bold text-[1.6rem] lg:text-[0.95rem]">Vi sprutmålar ytterdörrar på plats hemma hos kund över dagen. Skicka bild för offert!</span></p>
+        <p><span>Ytterdörrar: från 1875kr, en sida.</span> <span className="font-bold text-[1.35rem] sm:max-lg:text-[1.6rem] lg:text-[0.95rem]">Vi sprutmålar ytterdörrar på plats hemma hos kund över dagen. Skicka bild för offert!</span></p>
         <p className="mt-8">Träluckor och dörrar har naturlig karaktär vilket inte försvinner helt vid sprutmålning. Även fast karaktären i tr</p>
       </div>
 
-      <div className="text-[1.5rem] text-[#222] flex flex-col items-start w-full lg:w-[75%] lg:mx-auto lg:text-[0.86rem] lg:text-[#222]">
-        <p className="text-[1.7rem] text-[#398652] mb-2 lg:text-[16px] lg:font-medium lg:mt-0">OMLACKERING AV MÖBLER - SKICKA BILD FÖR OFFERT!</p>
+      <div className="text-[1.4rem] text-[#222] flex flex-col items-start w-full lg:w-[75%] lg:mx-auto lg:text-[0.86rem] lg:text-[#222]">
+        <p className="text-[1.7rem] max-sm:text-[1.5rem] text-[#398652] mb-2 lg:text-[16px] lg:font-medium lg:mt-0">OMLACKERING AV MÖBLER - SKICKA BILD FÖR OFFERT!</p>
         <p className="mb-5">Betalning:</p>
       </div>
 
