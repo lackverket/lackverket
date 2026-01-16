@@ -1,27 +1,26 @@
-
 "use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-
-
 export default function InfoForm() {
   const [formData, setFormData] = useState({
-    firstName: '',
-    additionalName: '',
-    email: '',
-    message: '',
+    firstName: "",
+    additionalName: "",
+    email: "",
+    message: "",
   });
 
   const [isEmailValid, setIsEmailValid] = useState<boolean>(true); // Track email validity
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
 
     // If the email field changes, check if it's valid
-    if (name === 'email') {
+    if (name === "email") {
       const emailPattern = /^[^@]+@[^@]+\.[^@]+$/;
       setIsEmailValid(emailPattern.test(value));
     }
@@ -32,13 +31,36 @@ export default function InfoForm() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!formData.email.trim()) {
-      alert('Vänligen ange en giltig e-postadress.');
+    if (!formData.email.trim() || !isEmailValid) {
+      alert("Vänligen ange en giltig e-postadress.");
       return;
     }
 
-    // Submit logic here
-    console.log('Form submitted:', formData);
+    const subject = encodeURIComponent(
+      "Förfrågan om sprutlackering – Lackverket"
+    );
+
+    const body = encodeURIComponent(
+      `Hej Lackverket,
+
+      Jag är intresserad av era tjänster och vill gärna ha mer information.
+
+      Förnamn: ${formData.firstName}
+      Tilltalsnamn: ${formData.additionalName}
+      E-post: ${formData.email}
+
+      Meddelande:
+      ${formData.message}
+
+      Vänliga hälsningar,
+      ${formData.firstName}
+      `
+    );
+
+    const mailtoLink = `mailto:info@lackverket.se?subject=${subject}&body=${body}`;
+
+    // Triggered directly by user submit → correct browser behavior
+    window.location.href = mailtoLink;
   };
 
   return (
@@ -64,20 +86,40 @@ export default function InfoForm() {
 
       {/* icon links */}
       <div className="flex justify-start items-center gap-4 wrap-break-word lg:w-full">
-        <Link href="www.facebook.com">
-          <Image src="/assets/facebook_svg.svg" alt="facebook logo" width={30} height={30} />
+        <Link href="">
+          <Image
+            src="/assets/facebook_svg.svg"
+            alt="facebook logo"
+            width={30}
+            height={30}
+          />
         </Link>
 
-        <Link href="www.x.com">
-          <Image src="/assets/twitter_svg.svg" alt="twitter logo" width={30} height={30} />
+        <Link href="">
+          <Image
+            src="/assets/twitter_svg.svg"
+            alt="twitter logo"
+            width={30}
+            height={30}
+          />
         </Link>
 
-        <Link href="www.linkedin.com">
-          <Image src="/assets/linkedin_svg.svg" alt="linkedin logo" width={30} height={30} />
+        <Link href="">
+          <Image
+            src="/assets/linkedin_svg.svg"
+            alt="linkedin logo"
+            width={30}
+            height={30}
+          />
         </Link>
 
-        <Link href="www.instagram.com">
-          <Image src="/assets/instagram_svg.svg" alt="instagram logo" width={30} height={30} />
+        <Link href="">
+          <Image
+            src="/assets/instagram_svg.svg"
+            alt="instagram logo"
+            width={30}
+            height={30}
+          />
         </Link>
       </div>
 
@@ -126,7 +168,9 @@ export default function InfoForm() {
           className="border rounded px-3 py-2"
         />
         {!isEmailValid && formData.email && (
-          <p className="text-red-600 text-sm mt-2">Please enter a valid email address.</p>
+          <p className="text-red-600 text-sm mt-2">
+            Please enter a valid email address.
+          </p>
         )}
       </div>
 
@@ -151,14 +195,18 @@ export default function InfoForm() {
         disabled={!isEmailValid || !formData.email.trim()}
         className={`
           px-4 py-2 
-          ${isEmailValid && formData.email.trim() ? 'bg-[#237374]' : 'bg-gray-400'}  // Button color changes based on validity
+          ${
+            isEmailValid && formData.email.trim()
+              ? "bg-[#237374]"
+              : "bg-gray-400"
+          }  // Button color changes based on validity
           text-white 
           rounded 
           w-full 
           disabled:bg-gray-400 
           mt-2
           hover:bg-white hover:text-[#237374] hover:border-[#237374] hover:border-2
-          transition-all duration-300 ease-in-out
+          transition-all duration-100 ease-in-out
         `}
       >
         Submit
@@ -166,4 +214,3 @@ export default function InfoForm() {
     </form>
   );
 }
-

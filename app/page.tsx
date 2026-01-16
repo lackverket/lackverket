@@ -1,10 +1,76 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { robotoBold } from "./layout";
-import { useRef, useState } from "react";
+import { Metadata } from "next";
 
+
+export const metadata:Metadata = {
+  title:
+    "Lackverket – Sprutlackering av Köksluckor, Dörrar & Möbler i Sverige",
+  description:
+    "Lackverket är specialister på sprutlackering av köksluckor, innerdörrar, ytterdörrar och möbler. Industrilack, valfri NCS-kulör och perfekt finish. 17 års erfarenhet, ROT-avdrag och gratis hämtning i närområdet.",
+  keywords: [
+    "sprutlackering",
+    "sprutmålning",
+    "sprutlackering köksluckor",
+    "måla köksluckor",
+    "sprutmåla dörrar",
+    "sprutmåla ytterdörr",
+    "sprutmåla innerdörrar",
+    "sprutmålning möbler",
+    "lackera möbler",
+    "förnya kök",
+    "lackering inredning",
+    "NCS kulör",
+    "ROT-avdrag målning",
+    "Lackverket",
+  ],
+  authors: [{ name: "Lackverket" }],
+  creator: "Lackverket",
+  publisher: "Lackverket",
+  metadataBase: new URL("https://www.lackverket.se"),
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://www.lackverket.se/",
+  },
+  openGraph: {
+    title:
+      "Lackverket – Professionell Sprutlackering i Sverige",
+    description:
+      "Vi sprutlackerar köksluckor, dörrar och möbler med industrifärg och perfekt finish. 17 års erfarenhet, ROT-avdrag och valfri NCS-kulör.",
+    url: "https://www.lackverket.se/",
+    siteName: "Lackverket",
+    locale: "sv_SE",
+    type: "website",
+    images: [
+      {
+        url: "https://www.lackverket.se/assets/painted_doors.avif",
+        width: 1200,
+        height: 630,
+        alt: "Sprutlackering av köksluckor och inredning – Lackverket",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lackverket – Sprutlackering av Köksluckor, Dörrar & Möbler",
+    description:
+      "Specialister på sprutlackering av kök, dörrar och möbler. Industrilack, NCS-kulör och perfekt resultat.",
+    images: ["https://www.lackverket.se/assets/painted_doors.avif"],
+  },
+  category: "Sprutlackering & Målning",
+};
 
 
 export default function Home() {

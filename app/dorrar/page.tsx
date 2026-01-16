@@ -1,13 +1,121 @@
-"use client";
-
 import Image from "next/image";
 import InfoForm from "../components/InfoForm";
 
 import ImageSlider from "../components/ImageSlider";
+import { Metadata } from "next";
+import Script from "next/script";
+
+export const metadata: Metadata = {
+  title: "Sprutmålning av Innerdörrar & Ytterdörrar i Sverige | Lackverket",
+  description:
+    "Professionell sprutmålning av innerdörrar och ytterdörrar i Sverige. Vi målar din ytterdörr på plats, utan att du blir utan dörr. Slipning, grundmålning och lackering med perfekt finish. ROT-avdrag upp till 50%. Kontakta Lackverket idag!",
+  keywords: [
+    "sprutmålning dörrar",
+    "sprutmåla innerdörrar",
+    "sprutmåla ytterdörr",
+    "måla dörrar",
+    "lackera dörrar",
+    "ytterdörr målning",
+    "innerdörr målning",
+    "sprutlackering dörr",
+    "måla ytterdörr på plats",
+    "dörrmålning Sverige",
+    "Lackverket",
+  ],
+  authors: [{ name: "Lackverket" }],
+  creator: "Lackverket",
+  publisher: "Lackverket",
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://www.lackverket.se/dorrar",
+  },
+  openGraph: {
+    title: "Sprutmålning av Innerdörrar & Ytterdörrar | Lackverket",
+    description:
+      "Vi sprutmålar inner- och ytterdörrar med professionellt resultat. Ytterdörrar målas på plats utan att du blir utan dörr. ROT-avdrag upp till 50%.",
+    url: "https://www.lackverket.se/dorrar",
+    siteName: "Lackverket",
+    locale: "sv_SE",
+    type: "website",
+    images: [
+      {
+        url: "https://www.lackverket.se/assets/slide_page_door.avif",
+        width: 1200,
+        height: 630,
+        alt: "Sprutmålad ytterdörr och innerdörr",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sprutmålning av Dörrar | Lackverket",
+    description:
+      "Sprutmålning av inner- och ytterdörrar med perfekt finish. Ytterdörrar målas på plats - snabbt, smidigt och professionellt.",
+    images: ["https://www.lackverket.se/assets/slide_page_door.avif"],
+  },
+  category: "Dörrmålning & Lackering",
+};
 
 const Dorrar = () => {
+  const dorrarSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://www.lackverket.se/dorrar#service",
+    name: "Sprutmålning av Innerdörrar och Ytterdörrar",
+    description:
+      "Professionell sprutmålning av innerdörrar och ytterdörrar. Ytterdörrar målas på plats hemma hos kund utan att du behöver vara utan dörr över natten. Slipning, grundmålning och lackering med perfekt finish. ROT-avdrag gäller.",
+    provider: {
+      "@type": "LocalBusiness",
+      "@id": "https://www.lackverket.se/#business",
+      name: "Lackverket",
+      url: "https://www.lackverket.se",
+      telephone: "+46720175620",
+      email: "info@lackverket.se",
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "SE",
+      },
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "Sverige",
+    },
+    serviceType: [
+      "Sprutmålning av ytterdörrar",
+      "Sprutmålning av innerdörrar",
+      "Lackering av dörrar",
+    ],
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "SEK",
+      availability: "https://schema.org/InStock",
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        description:
+          "Pris beror på dörrtyp och skick. Skicka bild för offert. ROT-avdrag kan tillämpas.",
+      },
+    },
+  };
+
   return (
     <section className="w-full flex flex-col justify-start items-center gap-7 bg-[#ebf5f0]">
+      <Script
+        id="dorrar-jsonld"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(dorrarSchema) }}
+      />
       {/* Image Section */}
       <div className="py-9 sm:max-2xl:py-0 w-full flex flex-col sm:max-2xl:flex-row-reverse h-[80vh] sm:max-2xl:h-[50vh] sm:max-2xl:mt-5 sm:max-2xl:w-[70%] sm:max-2xl:mx-auto">
         <div className="h-[60%] w-full sm:max-2xl:w-[50vw] sm:max-2xl:h-full relative px-4 sm:max-2xl:px-0">

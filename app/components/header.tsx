@@ -34,8 +34,8 @@ const Header = () => {
           <Image
             src="/assets/logo.avif"
             alt="Logo"
-            width={200}
-            height={200}
+            width={100}
+            height={100}
             className="w-[55vw] h-auto sm:max-lg:w-50 sm:max-lg:h-50"
           />
         </div>
@@ -88,8 +88,8 @@ const Header = () => {
           {[
             { href: "/", text: "Hem" },
             {
-              href: "/prislista-2025-sprutlackeringstjanster",
-              text: "Prislista 2025 Sprutlackeringstjänster",
+              href: "/prislista-2026-sprutlackeringstjanster",
+              text: "Prislista 2026 Sprutlackeringstjänster",
             },
             { href: "/about-4", text: "Lackering Köksluckor" },
             { href: "/mobler", text: "Lackering Möbler" },
@@ -125,8 +125,8 @@ const Header = () => {
           <Image
             src="/assets/logo.avif"
             alt="Logo"
-            width={200}
-            height={200}
+            width={100}
+            height={100}
             className="h-full w-auto"
           />
         </div>
