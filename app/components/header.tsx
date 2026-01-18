@@ -140,8 +140,8 @@ const Header = () => {
             </div>
 
             <div className="hover:text-[#ddf7ea] transition-colors duration-200">
-              <Link href="/prislista-2025-sprutlackeringstjanster">
-                Prislista 2025 Sprutlackeringstjänster
+              <Link href="/prislista-2026-sprutlackeringstjanster">
+                Prislista 2026 Sprutlackeringstjänster
               </Link>
             </div>
 
